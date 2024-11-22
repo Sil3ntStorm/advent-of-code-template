@@ -1,0 +1,137 @@
+---
+Language: Cpp
+BasedOnStyle: Microsoft
+AccessModifierOffset: -2
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: AcrossEmptyLinesAndComments
+AlignConsecutiveBitFields: AcrossEmptyLinesAndComments
+AlignConsecutiveDeclarations: AcrossComments
+AlignConsecutiveMacros: AcrossComments
+AlignEscapedNewlines: Left
+AlignOperands: AlignAfterOperator
+AlignTrailingComments: true
+AllowAllArgumentsOnNextLine: false
+AllowAllConstructorInitializersOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty # Maybe Inline (to allow `foo([](int x) { bar(x); });`)
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: MultiLine
+BinPackArguments: true
+BinPackParameters: true
+BitFieldColonSpacing: Both
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: true
+  AfterControlStatement: MultiLine
+  AfterEnum: true
+  AfterExternBlock: false
+  AfterFunction: true
+  AfterNamespace: false
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Custom
+BreakBeforeConceptDeclarations: true
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: false
+ColumnLimit: 180
+CompactNamespaces: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+#ConstructorInitializerIndentWidth: 2
+#ContinuationIndentWidth: 2
+Cpp11BracedListStyle: true
+DeriveLineEnding: false
+DerivePointerAlignment: false
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
+FixNamespaceComments: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:           '^<sdkddkver\.h>$'
+    Priority:        1
+  - Regex:           '^"[^\/]*"$'   # any local file without path e.g. "foo.h"
+    Priority:        2
+  - Regex:           '^".*"$'       # any unmatched local include e.g. "foo/bar.h". For subdirectory includes of the current files path
+    Priority:        3
+  - Regex:           '^<[^\/\.]*>$' # any <> includes without file extension or path. Intended for std includes like <string>
+    Priority:        6
+  - Regex:           '.*'           # global fallback for any include not matched above
+    Priority:        5
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentExternBlock: NoIndent
+IndentGotoLabels: false
+IndentPPDirectives: None
+IndentRequires: false
+IndentWidth: 4
+IndentWrappedFunctionNames: false
+InsertNewlineAtEOF: true
+KeepEmptyLinesAtEOF: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+LineEnding: LF
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: None
+ObjCBinPackProtocolList: Always
+ObjCSpaceBeforeProtocolList: false
+PenaltyBreakAssignment: 5000
+PenaltyBreakBeforeFirstCallParameter: 5000
+PenaltyBreakComment: 10
+PenaltyBreakFirstLessLess: 1500
+PenaltyBreakOpenParenthesis: 20
+PenaltyBreakString: 10
+PenaltyBreakTemplateDeclaration: 100
+PenaltyExcessCharacter: 1
+PenaltyIndentedWhitespace: 1
+PenaltyReturnTypeOnItsOwnLine: 1000000
+PointerAlignment: Left
+ReflowComments: true
+ShortNamespaceLines: 2
+SortIncludes: CaseInsensitive
+SortUsingDeclarations: true
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpacesInCStyleCastParentheses: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+Standard: c++20
+TabWidth: 4
+UseCRLF: false
+UseTab: Never
+...
