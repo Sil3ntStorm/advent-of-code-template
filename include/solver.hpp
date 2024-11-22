@@ -15,8 +15,8 @@ limitations under the License.
 **/
 
 #pragma once
-#include <string_view>
 #include <string>
+#include <string_view>
 
 namespace aoc::base {
 class Solver
@@ -31,4 +31,4 @@ class Solver
   protected:
     std::string_view m_puzzle;
 };
-} // namespace aoc
+} // namespace aoc::base
