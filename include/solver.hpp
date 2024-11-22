@@ -22,7 +22,7 @@ namespace aoc::base {
 class Solver
 {
   public:
-    Solver(const std::string_view& puzzle);
+    explicit Solver(const std::string_view& puzzle);
     virtual ~Solver();
 
     virtual std::string part1() = 0;

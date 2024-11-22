@@ -35,7 +35,7 @@ def inject(lines, after, to_add):
 if __name__ == '__main__':
     cmdparse = argparse.ArgumentParser()
     cmdparse.add_argument('--year', type=int, choices=range(2015, datetime.now().year + 1))
-    cmdparse.add_argument('--day', type=int, choices=range(1,25 + 1))
+    cmdparse.add_argument('--day', type=int, choices=range(1, 25 + 1))
     cmdparse.add_argument('--token', type=str, required=True)
     params = cmdparse.parse_args()
     if (not params.year or not params.day) and (datetime.now().month != 12 or (datetime.now().month == 12 and datetime.now().day > 25)):

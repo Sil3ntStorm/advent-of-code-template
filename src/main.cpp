@@ -95,7 +95,7 @@ int main(int argc, char** argv)
     } catch (const CLI::ParseError& e) {
         std::cerr << e.what() << '\n';
         std::cout << cli.help() << '\n';
-        return -1;
+        return 1;
     }
     if (use_latest) {
         if (year == 0) {
@@ -145,7 +145,7 @@ int main(int argc, char** argv)
         aoc.solve(!skip1, !skip2);
     } catch (const std::runtime_error& e) {
         std::cerr << "FAIL: " << e.what() << '\n';
-        return -2;
+        return 2;
     }
     return 0;
 }

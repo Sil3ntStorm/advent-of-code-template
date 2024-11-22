@@ -13,18 +13,9 @@ add_executable(${PROJ_BIN_NAME})
 
 target_include_directories(${PROJ_BIN_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include>)
 
-find_package(spdlog REQUIRED)
 find_package(cli11 REQUIRED)
-find_package(Microsoft.GSL REQUIRED)
 
-target_link_libraries(${PROJ_BIN_NAME} PRIVATE spdlog::spdlog_header_only)
 target_link_libraries(${PROJ_BIN_NAME} PRIVATE CLI11::CLI11)
-target_link_libraries(${PROJ_BIN_NAME} PRIVATE Microsoft.GSL::GSL)
-
-# Make spdlog use std::format instead of using fmtlib
-target_compile_definitions(${PROJ_BIN_NAME} PUBLIC SPDLOG_USE_STD_FORMAT)
-# Enable Weak algorithms (e.g. MD5)
-target_compile_definitions(${PROJ_BIN_NAME} PUBLIC CRYPTOPP_ENABLE_NAMESPACE_WEAK)
 
 # Because CMake refuses to set these flags for MSVC
 if(MSVC AND (MSVC_VERSION GREATER_EQUAL 1914))

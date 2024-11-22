@@ -17,9 +17,7 @@ class AoC_Conan(ConanFile):
     }
 
     def requirements(self):
-        self.requires("spdlog/1.15.0")
         self.requires("cli11/2.4.2")
-        self.requires("ms-gsl/4.0.0")
 
     def layout(self):
         cmake_layout(self)
